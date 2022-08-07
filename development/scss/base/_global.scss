@@ -1,0 +1,290 @@
+// common styles
+
+body {
+    @extend %poppins-700;
+    font-size: 12px;
+    color: $letters-color;
+    line-height: 18px;
+}
+
+.container {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.title {
+    &_36px {
+        position: relative;
+        font-size: 36px;
+        line-height: 60px;
+    }
+
+    &_48px {
+        position: relative;
+        font-size: 48px;
+        line-height: 60px;
+    }
+
+    &_16px {
+        position: relative;
+        font-size: 16px;
+        padding-left: 10px;
+        line-height: 24px;
+    }
+    
+    &_14px {
+        position: relative;
+        font-size: 14px;
+        line-height: 21px;
+    }
+}
+
+.btn {
+    background-color: $main-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    padding: 12px 25px;
+}
+
+
+// Promo section
+
+.promo {
+    min-height: 100vh;
+    position: relative;
+    background: url('../../images/main-bg.jpg') no-repeat 50%/cover;
+    padding-top: 205px;
+
+    &__title {
+        max-width: 590px;
+        margin-bottom: 25px;
+    }
+
+    &__subtitle {
+        margin-bottom: 10px;
+        @include before_circle;
+        z-index: 2;
+        position: relative;
+    }
+
+    &__btns {
+        display: flex;
+        column-gap: 45px;
+        align-items: center;
+    }
+
+    &__link {
+        font-size: 14px;
+        line-height: 21px;
+    }
+}
+
+.hamburger {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    width: 36px;
+    height: 21px;
+    cursor: pointer;
+
+    &__line {
+        width: 30px;
+        height: 3px;
+        margin-left: auto;
+        display: block;
+        background-color: #151812;
+    }
+
+    &__line_long {
+        width: 36px;
+        margin: 6px 0;
+    }
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 0.3s all;
+    height: 100%;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+
+    &_active {
+        visibility: visible;
+        opacity: 1;
+        left: 0%;
+    }
+
+    &__block {
+        width: 345px;
+        background-color: $main-color;
+        height: 100%;
+        color: #fff;
+        z-index: 10;
+        position: relative;
+        padding: 140px 0 0 40px;
+    }
+
+    &__close {
+        position: absolute;
+        top: 25px;
+        cursor: pointer;
+        right: 25px;
+    }
+
+    &__item {
+        padding-left: 35px;
+        position: relative;
+        transition: 0.2s all;
+        cursor: pointer;
+    }
+
+    &__item::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        transition: 0.2s all;
+        width: 15px;
+        height: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: transparent;
+        border-radius: 50%;
+        border: 2px solid #fff;
+    }
+
+    &__item+&__item {
+        padding-left: 35px;
+        margin-top: 15px;
+    }
+
+    &__item:hover {
+        color: #000;
+    }
+
+    &__item:hover:before {
+        background-color: #000;
+        border: 2px solid #000;
+    }
+
+
+    &__link {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    &__overlay {
+        top: 0;
+        position: fixed;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.8;
+    }
+
+}
+
+.social {
+    width: 50px;
+    position: absolute;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    bottom: 50px;
+    justify-content: space-between;
+}
+
+
+// About section
+
+
+.about {
+    min-height: 100vh;
+    padding-top: 150px;
+
+    &__inner {
+        display: flex;
+        column-gap: 70px;
+    }
+
+    &__descr {
+        max-width: 570px;
+        padding-top: 8px;
+
+    }
+    &__photo {
+        max-width: 400px;
+    }
+    
+    &__img {
+        height: 600px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__text {
+        @extend %poppins-500;
+        font-size: 14px;
+        line-height: 21px;
+        margin-bottom: 40px;
+    }
+
+    &__subtitle {
+        @include before_circle;
+        margin-bottom: 6px;
+    }
+
+    &__title {
+        @include divider;
+        margin-bottom: 25px;
+    }
+}
+
+
+.about-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__item {
+        width: 260px;
+        padding-left: 60px;
+        position: relative;
+        margin-bottom: 20px;
+        @include before_circle;
+        background-repeat: no-repeat;
+        background-position: 18px 15px;
+    }        
+    &__item::before {
+        top: 0;
+        transform: translateY(0);
+    }  
+    &__item_web {
+        background-image: url('../../images/icons/about/web.svg');
+
+    }      
+    &__item_phone {
+        background-image: url('../../images/icons/about/phone.svg');
+
+    }      
+    &__item_design {
+        background-image: url('../../images/icons/about/design.svg');
+
+    }      
+         
+
+    &__title {
+        margin-bottom: 6px;
+    }
+
+    &__descr {
+        font-size: 12px;
+        @extend %poppins-500;
+    }
+    
+
+    
+}

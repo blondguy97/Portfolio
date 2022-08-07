@@ -1,0 +1,45 @@
+// Variables
+
+$letters-color: #000;
+$main-color: #FFA501;
+
+
+// Extended
+
+%poppins-500 {
+    font-family: 'Poppins-Medium', Arial;
+    font-weight: 500;
+}
+
+%poppins-700 {
+    font-family: 'Poppins-Bold', Arial;
+    font-weight: 700;
+}
+
+
+// Mixins
+
+@mixin before_circle {
+    &::before {
+        content: '';
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: $main-color;
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 42%;
+        transform: translateY(-50%);
+    }
+}
+
+@mixin divider {
+    &::after {
+        content: '';
+        display: block;
+        background-color: $main-color;
+        width: 60px;
+        height: 3px;
+    }
+}
