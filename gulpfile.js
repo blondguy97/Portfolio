@@ -80,11 +80,11 @@ function cleanDist() {
 
 function build() {
     return gulp.src([
-        'development/**/*.html',
+        'development/*.html',
         'development/css/style.min.css',
         'development/js/main.min.js'
     ], {base: 'development'})
-    .pipe(gulp.dest('finished-app'))
+    .pipe(gulp.dest('finished-app/'))
 }
 
 exports.styles = styles;
