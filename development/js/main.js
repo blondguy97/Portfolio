@@ -12,9 +12,3 @@ close.addEventListener('click', function () {
 
 })
 
-const counters = document.querySelectorAll('.skills-rating__counter'),
-      lines = document.querySelectorAll('.skills-rating__status-bar');
-
-	  counters.forEach(function(item, i) {
-		lines[i].style.width = item.innerHTML;
-	  }) 

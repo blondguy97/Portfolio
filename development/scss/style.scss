@@ -142,14 +142,13 @@
 }
 
 .social {
-    width: 50px;
     position: absolute;
     display: flex;
     left: 50%;
+    gap: 10px;
     transform: translateX(-50%);
     align-items: center;
     bottom: 50px;
-    justify-content: space-between;
 }
 
 
@@ -160,6 +159,7 @@
 
     &__inner {
         display: flex;
+        align-items: center;
         column-gap: 70px;
     }
 
@@ -194,8 +194,9 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
     &__item {
-        flex: 0 0 48%; 
+        flex: 0 0 48%;
         padding-left: 60px;
         position: relative;
         margin-bottom: 20px;
@@ -295,6 +296,7 @@
 
 .resume-card {
     position: relative;
+
     &::before {
         content: '';
         height: 1px;
@@ -303,6 +305,7 @@
         background-color: #000;
         top: 56px;
     }
+
     &__head {
         padding: 35px 0 0 100px;
         position: relative;
@@ -330,7 +333,7 @@
     }
 
     &__body {
-        padding: 12px 0 0 43px;  
+        padding: 12px 0 0 43px;
         @extend %poppins-500;
         font-size: 12px;
         line-height: 18px;
@@ -391,7 +394,7 @@
 
     &__item {
         display: grid;
-        grid-template-columns: minmax(210px, auto) minmax(35px, auto) ;
+        grid-template-columns: minmax(210px, auto) minmax(35px, auto);
         grid-template-rows: minmax(60px, auto) 14px;
         justify-content: space-between;
         align-content: space-between;
@@ -537,7 +540,7 @@
         display: grid;
         grid-template-rows: 45px 190px 45px;
         grid-template-columns: repeat(2, 280px);
-        gap: 30px 25px;    
+        gap: 30px 25px;
 
     }
 
@@ -600,20 +603,13 @@
         &__checkbox {
             margin-right: 10px;
         }
+
         &__link {
             color: #2306D6;
         }
     }
 
 }
-
-
-
-
-
-
-
-
 
 
 
